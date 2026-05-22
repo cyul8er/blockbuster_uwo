@@ -50,6 +50,12 @@
     gap: 5px;
 }
 
+/* lead */
+.leadGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 /* BUSINESS */
 .businessGrid{
     display: grid;
@@ -57,11 +63,11 @@
     gap: 5px;
 
     align-items: start;
+
+    grid-template-columns: repeat(2, 1fr);
+
 }
 
-.businessGrid .large{
-    grid-column: 1 / span 2;
-}
 
 /* CREATIVE */
 .creativeGrid{
