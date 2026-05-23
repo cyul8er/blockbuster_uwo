@@ -50,6 +50,12 @@
     gap: 5px;
 }
 
+/* lead */
+.leadGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 /* BUSINESS */
 .businessGrid{
     display: grid;
@@ -57,11 +63,11 @@
     gap: 5px;
 
     align-items: start;
+
+    grid-template-columns: repeat(2, 1fr);
+
 }
 
-.businessGrid .large{
-    grid-column: 1 / span 2;
-}
 
 /* CREATIVE */
 .creativeGrid{
@@ -107,6 +113,15 @@
 .memberInfo h3{
     margin: 0;
     font-size: 1.2rem;
+}
+
+
+.memberInfo a{
+    margin: 0;
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .memberInfo p{

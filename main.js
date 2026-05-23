@@ -3,7 +3,7 @@
 
 // cd cover + cd changing DRAFT
 const buttons = document.querySelectorAll(".option");
-const poster = document.getElementById("cover");
+const poster = document.getElementById("coverPoster");
 const trailer = document.getElementById("cd")
 
 buttons.forEach(button => {
@@ -17,7 +17,7 @@ buttons.forEach(button => {
 
     // Change cover color
     const posterimg = button.dataset.post;
-    poster.style.backgroundColor = posterimg;
+    poster.src = posterimg;
     // change cd
     const trailervid = button.dataset.vid;
     trailer.style.backgroundColor = trailervid
