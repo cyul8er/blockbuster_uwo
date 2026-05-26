@@ -1,0 +1,189 @@
+.history{
+    height: 100vh;
+    width: 100vw;
+}
+
+
+/* EACH SECTION */
+.teamSection{
+    display: grid;
+
+    grid-template-columns:
+        0.05fr
+        0.5fr
+        1fr;
+
+    width: 100%;
+    min-height: 100vh;
+
+    border-bottom: 4px solid black;
+}
+
+/* LEFT TITLE COLUMN */
+.titleColumn{
+    border-right:4px solid black;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.titleColumn h1{
+    writing-mode:vertical-rl;
+
+    font-size:clamp(4rem, 7vw, 9rem);
+
+    font-weight:900;
+
+    letter-spacing:8px;
+
+    margin:0;
+}
+
+/* CENTER MEMBERS */
+.membersColumn{
+    padding: 10px;
+}
+
+.memberGrid{
+    display: grid;
+    gap: 5px;
+}
+
+/* lead */
+.leadGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* BUSINESS */
+.businessGrid{
+    display: grid;
+
+    gap: 5px;
+
+    align-items: start;
+
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+
+/* CREATIVE */
+.creativeGrid{
+    display: grid;
+
+    grid-template-columns: repeat(6, 1fr);
+
+    gap: 1rem;
+}
+
+/* TOP ROW */
+.creativeGrid .memberCard:not(.wide){
+    grid-column: span 2;
+}
+
+/* ALL OTHER ROWS */
+.creativeGrid .wide{
+    grid-column: span 3;
+}
+
+/* CARDS */
+.memberCard{
+    aspect-ratio: 3 / 5;
+
+    border-bottom: 2px;
+    border: black;
+    overflow: hidden;
+
+    position: relative;
+
+    background: white;
+}
+
+.memberCard img{
+    width: 100%;
+    aspect-ratio: 1/1;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.memberInfo h3{
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+
+.memberInfo a{
+    margin: 0;
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.memberInfo p{
+    margin: 0.25rem 0 0 0;
+}
+
+/* RIGHT COLUMN */
+.infoColumn{
+    border-left: 4px solid black;
+
+    display: grid;
+
+    grid-template-rows:
+        1.5fr
+        1fr
+        0.5fr;
+
+    gap: 1rem;
+
+    padding: 1rem;
+}
+
+/* INFO BOXES */
+.infoPanel{
+    border-bottom:4px solid black;
+}
+
+.infoPanel:last-child{
+    border-bottom:none;
+}
+.infoPanel img {
+    width: 100%;
+}
+
+/* RESPONSIVE */
+@media(max-width:50px){
+
+    .teamSection{
+        grid-template-columns:
+            80px
+            1fr
+            180px;
+    }
+
+    .businessGrid,
+
+
+    .creativeGrid{
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+/* chat */
+.people{
+    background-color: blueviolet;
+}
+
+.people.b{
+ display: grid;
+
+}
+
+.people.c{
+    display: grid;
+}
