@@ -1,6 +1,4 @@
 import styles from './about.module.css'
-import Image from 'next/image'
-import Footer from '@/components/Footer'
 import MemberCard from '@/components/MemberCard'
 
 export default function About(){
