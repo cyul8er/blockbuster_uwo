@@ -11,18 +11,21 @@ export default function MenuBar() {
         className={`hbMenu ${active ? "active" : ""}`}
         onClick={() => setActive(!active)}
       >
-        Menu
+        <div className="topBar" />
+        <div className="botBar" />
       </button>
-
-      <div className={`overFade ${active ? "active" : ""}`} />
+      
+      <div className={`overFade ${active ? "active" : ""}`} onClick={() => setActive(false)}/>
 
       <div className={`menuSide ${active ? "active" : ""}`}>
-        <div><a href="home.html">Home</a></div>
-        <div><a href="about.html">About</a></div>
-        <div><a href="projects.html">Projects</a></div>
-        <div><a href="news.html">News</a></div>
-        <div><a href="sponsors.html">Sponsors</a></div>
-        <div><a href="contact.html">Contact</a></div>
+        <nav className = "sideNav">
+        <div><a href="\">Home</a></div>
+        <div><a href="/about">About</a></div>
+        <div><a href="/projects">Projects</a></div>
+        <div><a href="/news">News</a></div>
+        <div><a href="/sponsors">Sponsors</a></div>
+        <div><a href="/contact">Contact</a></div>
+        </nav>
       </div>
     </>
   );

@@ -1,13 +1,11 @@
 import "./home.css"
-import Header from "@/components/Header"
 import Image from "next/image"
 import HeaderCD from "@/components/HeaderCD"
+import HomeNews from "@/components/HomeNews"
 
 export default function Home() {
   return (
     <>
-    <Header></Header>
-
     <HeaderCD></HeaderCD>
 
     <section className="sec sec2">
@@ -25,7 +23,7 @@ export default function Home() {
 
     <div className = "rightHome">
         <div className = "text">
-            <p className = "font-weight: bold; ">EST. 2025</p> <br /><br /><br /><br /><br />
+            <p className = "font-bold">EST. 2025</p> <br /><br /><br /><br /><br />
             <p>At Blockbuster, we're dedicated to giving you and your fellow students at Western the opportunity to become the best version of yourself through the beautiful collaborative art form of filmmaking. </p>
             <br />
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
@@ -51,7 +49,10 @@ export default function Home() {
 
     <section className="sec sec3">
     <h1>news</h1>
-    <div id = "newsPreview">  </div>
+    <div id = "newsPreview">  
+      <HomeNews></HomeNews>
+    </div>
+    
     {/* <script src = main.js> </script> */}
     </section>
   </>
