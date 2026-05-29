@@ -7,7 +7,7 @@ interface FilmCardProps{
     directors: string
     runtime: string
     genres: string
-    image?: string
+    image: string
 
 }
 export default function FilmCard(FilmCardProps:FilmCardProps){
