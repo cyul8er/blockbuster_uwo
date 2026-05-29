@@ -44,10 +44,9 @@ export default function About(){
                     <MemberCard name="Name" role="Sponsorship" image="/placeholder/saiki3.jpg" alt= "vpSponsorship"></MemberCard>
                     <MemberCard name="Name" role="Finance" image="/placeholder/haiba.jpg" alt= "vpFinance"></MemberCard>
                     <MemberCard name="Amara" role="VP Marketing" image="/placeholder/kyoka.jpg" alt= "vpMarketing"></MemberCard>
-                    <MemberCard name="Kush" role="VP Events" image="/placeholder/yatora.jpg" alt= "vpEvents"></MemberCard>
+                    <MemberCard name="Ongkush Banik" letterboxd="https://letterboxd.com/ongkushbanik/" role="VP Events" image="/placeholder/yatora.jpg" alt= "vpEvents"></MemberCard>
                 </div>
             </div>
-
             <div className={styles.infoColumn}>
 
                 <div className={styles.infoPanel}></div>
