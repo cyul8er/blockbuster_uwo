@@ -70,9 +70,9 @@ header{
 
 .hbMenu{
     position: fixed;
-
-    top: clamp(1rem, 2vw, 2rem);
-    left: clamp(1rem, 2vw, 2rem);
+    /* clamp (min, pref, max) */
+    top: clamp(1rem, 0.5vw, 2rem);
+    left: clamp(0.5rem, 1vw, 2rem);
 
     width: clamp(50px, 5vw, 70px);
     height: clamp(50px, 5vw, 70px);
@@ -85,7 +85,7 @@ header{
 
     align-items: center;
 
-    gap: clamp(8px, 1vw, 12px);
+    gap: 7px;
 
     cursor: pointer;
 
