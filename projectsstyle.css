@@ -1,11 +1,11 @@
 .nowShowing{
     width: 100vw;
     height: 100vh;
-
 }
 
 .nowNow{
     background-size: cover;
+    width: 100vw;
 }
 
 .directory {
@@ -20,6 +20,10 @@
 .filmCard {
     border: 1px solid #ccc;
     padding: 10px;
+}
+
+.filmCard p{
+    font-size: small;
 }
 
 .filmCard img {
