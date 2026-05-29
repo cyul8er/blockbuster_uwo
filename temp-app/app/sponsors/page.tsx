@@ -1,5 +1,15 @@
 export default function Sponsors(){
     return(
-        <div>idk</div>
+        <>
+        <section className = "current">
+            <h1> Current sponsors</h1>
+        </section>
+
+        <section className = "future">
+            <h1> 
+                Sponsorship Package 
+               </h1>
+        </section>
+    </>
     )
 }
