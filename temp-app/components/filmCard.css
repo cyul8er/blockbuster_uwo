@@ -1,43 +1,280 @@
-.nowShowing{
-    width: 100vw;
-    height: 100vh;
-
-}
-
-.nowNow{
-    background-size: cover;
-}
-
-.directory {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
-    margin: 0 auto; 
-    width: 90%;
-    margin-top:-250;
-}
-
 .filmCard {
-    border: 1px solid #ccc;
-    padding: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #f4efe3;
+    border: 2px solid #111;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+    font-family: "Courier New", monospace;
+    color: #111;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.9);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    overflow: visible; /* stub needs room to fly out */
+    padding: 0;
 }
 
-.filmCard img {
+.filmCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 6px 8px 0 rgba(0, 0, 0, 0.9);
+}
+
+/* once torn, the card sits inert behind the modal until closed */
+.filmCard.torn {
+    pointer-events: none;
+}
+
+.filmCard .stub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: #f4efe3;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    z-index: 2;
+    transform-origin: left center;
+    transition: transform 0.55s cubic-bezier(0.6, -0.2, 0.8, 0.2),
+                opacity 0.5s ease 0.1s;
+}
+
+.filmCard.tearing .stub {
+    transform: translate(30px, -55px) rotate(14deg);
+    opacity: 0;
+}
+.filmCard.torn .stub {
+    opacity: 0;
+}
+
+.filmCard .perf {
+    position: relative;
+    height: 0;
+    border-top: 2px dashed #111;
+    transition: filter 0.3s ease;
+}
+.filmCard .perf::before,
+.filmCard .perf::after {
+    content: "";
+    position: absolute;
+    top: -9px;
+    width: 18px;
+    height: 18px;
+    background: var(--page-bg, #0b0a08);
+    border: 2px solid #111;
+    border-radius: 50%;
+    z-index: 1;
+}
+.filmCard .perf::before { left: -11px; }
+.filmCard .perf::after { right: -11px; }
+
+/* jagged torn-paper edge revealed along the perforation line */
+.filmCard .perf::after,
+.filmCard .perf::before {
+    transition: opacity 0.3s ease;
+}
+.filmCard.tearing .perf,
+.filmCard.torn .perf {
+    border-top: none;
+    height: 8px;
+    background: linear-gradient(-45deg, transparent 6px, #f4efe3 6px) 0 0,
+                linear-gradient(45deg, transparent 6px, #f4efe3 6px) 0 0;
+    background-size: 12px 12px;
+    background-repeat: repeat-x;
+    filter: drop-shadow(0 -1px 0 #111);
+}
+
+.filmCard .ticketRest {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    transition: opacity 0.5s ease 0.05s, transform 0.5s ease 0.05s, filter 0.5s ease;
+}
+.filmCard.tearing .ticketRest {
+    opacity: 0;
+    transform: scale(0.94) translateY(6px);
+    filter: blur(1px);
+}
+.filmCard.torn .ticketRest {
+    opacity: 0;
+}
+
+.filmCard .poster {
     width: 100%;
     height: auto;
-    display: block;
-    margin: 0 auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    filter: grayscale(1) contrast(1.1);
+    border-bottom: 2px solid #111;
 }
 
-@media (max-width: 900px) {
-    .filmGrid {
-        grid-template-columns: repeat(2, 1fr);
+.filmCard .titleCard {
+    padding: 0.9rem 0.9rem 0.2rem;
+}
+.filmCard .titleCard h1 {
+    font-family: Georgia, serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    line-height: 1.2;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.filmCard p {
+    font-size: 0.7rem;
+    margin: 0 0.9rem 0.35rem;
+    opacity: 0.8;
+}
+
+.filmCard .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 0.9rem;
+    margin-top: auto;
+}
+.filmCard .barcode {
+    display: block;
+    width: 55%;
+    height: 14px;
+    background: repeating-linear-gradient(
+        90deg,
+        #111 0px, #111 2px,
+        transparent 2px, transparent 4px,
+        #111 4px, #111 5px,
+        transparent 5px, transparent 8px
+    );
+}
+.filmCard .stars {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+}
+
+/* ---------- modal ---------- */
+.filmModalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    z-index: 100;
+    animation: overlayIn 0.35s ease both;
+}
+
+@keyframes overlayIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.filmModal {
+    position: relative;
+    display: flex;
+    max-width: 720px;
+    width: 100%;
+    max-height: 85vh;
+    overflow: auto;
+    background: #f4efe3;
+    border: 2px solid #111;
+    border-radius: 12px;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.9);
+    color: #111;
+    font-family: "Courier New", monospace;
+    animation: modalIn 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    animation-delay: 0.08s;
+}
+
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: scale(0.85) translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
     }
 }
 
-@media (max-width: 600px) {
-    .filmGrid {
-        grid-template-columns: 1fr;
+.filmModal .closeBtn {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 32px;
+    height: 32px;
+    border: 2px solid #111;
+    border-radius: 50%;
+    background: #f4efe3;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.filmModal .modalPoster {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    filter: grayscale(1) contrast(1.1);
+    border-right: 2px dashed #111;
+}
+
+.filmModal .modalContent {
+    padding: 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.filmModal .modalContent h1 {
+    font-family: Georgia, serif;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    margin: 0.25rem 0;
+}
+.filmModal .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.65rem;
+    opacity: 0.7;
+}
+.filmModal .modalDirectors {
+    opacity: 0.7;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+.filmModal .modalInfo {
+    display: flex;
+    gap: 1.5rem;
+    border-top: 1px dashed #111;
+    border-bottom: 1px dashed #111;
+    padding: 0.75rem 0;
+    margin: 0.25rem 0 0.75rem;
+}
+.filmModal .modalInfo div {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.75rem;
+}
+.filmModal .modalInfo span {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.6rem;
+    opacity: 0.6;
+}
+.filmModal .synopsis {
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 560px) {
+    .filmModal { flex-direction: column; }
+    .filmModal .modalPoster {
+        width: 100%;
+        aspect-ratio: 3 / 2;
+        border-right: none;
+        border-bottom: 2px dashed #111;
     }
 }
