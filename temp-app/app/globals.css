@@ -10,12 +10,37 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --font-linearBeam: var(--font-linear-beam);
+  --font-jetbrains: var(--font-jetbrains-mono);
+
+}
+
+@theme {
+  --color-purple-main: #200035;
+  --color-blue-main: #444a93;
+  --color-purple-secondary: #755faf;
+  --color-offwhite: #eae7ed;
+
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+  }
+}
+
+@layer components {
+  .font-linearBeam {
+    font-family: var(--font-linearBeam);
+    letter-spacing: -0.075em;
+  }
+  .font-jetbrains {
+    font-family: var(--font-jetbrains);
+    letter-spacing: -0.1em;
+    font-style: italic;
+    font-weight: 300;
   }
 }
 
@@ -48,10 +73,7 @@ h2 {
 
 /* site bounds */
 *{
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
 }
 
 
