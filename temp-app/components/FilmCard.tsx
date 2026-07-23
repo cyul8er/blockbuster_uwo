@@ -4,32 +4,22 @@ import Image from "next/image"
 import {useState} from "react"
 
 interface FilmCardProps{
-    name: string
+    title: string
     year: string
-    directors: string
-    runtime: string
-    genres: string
-    image: string
-
-}
-
-interface FilmCardProps{
-    name: string
-    year: string
-    directors: string
-    runtime: string
-    genres: string
-    image: string
-    synopsis?: string
+    dir: string
+    rt: string
+    gens: string
+    img: string
+    desc: string
 }
 
 export default function FilmCard(FilmCardProps:FilmCardProps){
     const [phase, setPhase] = useState<"idle" | "tearing" | "open">("idle")
 
+    // animation on click
     const handleClick = () => {
         if (phase !== "idle") return
         setPhase("tearing")
-        // matches the tear animation duration in filmCard.css
         setTimeout(() => setPhase("open"), 550)
     }
 
@@ -37,6 +27,7 @@ export default function FilmCard(FilmCardProps:FilmCardProps){
         setPhase("idle")
     }
 
+    // ticket graphics 
     return(
         <>
         <article
@@ -52,7 +43,7 @@ export default function FilmCard(FilmCardProps:FilmCardProps){
 
             <div className="ticketRest">
                 <Image
-                    src={FilmCardProps.image}
+                    src={FilmCardProps.img}
                     alt="poster"
                     width={200}
                     height={260}
@@ -60,12 +51,12 @@ export default function FilmCard(FilmCardProps:FilmCardProps){
                 />
 
                 <div className="titleCard">
-                    <h1>{FilmCardProps.name}</h1>
+                    <h1>{FilmCardProps.title}</h1>
                 </div>
 
-                <p>Dir. {FilmCardProps.directors}</p>
-                <p>Runtime. {FilmCardProps.runtime}</p>
-                <p>Genre. {FilmCardProps.genres}</p>
+                <p>Dir. {FilmCardProps.dir}</p>
+                <p>Runtime. {FilmCardProps.rt}</p>
+                <p>Genre. {FilmCardProps.gens}</p>
 
                 <div className="footer">
                     <span className="barcode" />
@@ -74,13 +65,14 @@ export default function FilmCard(FilmCardProps:FilmCardProps){
             </div>
         </article>
 
+        {/* on click pop up  */}
         {phase === "open" && (
             <div className="filmModalOverlay" onClick={handleClose}>
                 <div className="filmModal" onClick={(e) => e.stopPropagation()}>
                     <button className="closeBtn" onClick={handleClose}>✕</button>
 
                     <Image
-                        src={FilmCardProps.image}
+                        src={FilmCardProps.img}
                         alt="poster"
                         width={300}
                         height={400}
@@ -89,17 +81,17 @@ export default function FilmCard(FilmCardProps:FilmCardProps){
 
                     <div className="modalContent">
                         <span className="eyebrow">Now Screening</span>
-                        <h1>{FilmCardProps.name}</h1>
-                        <p className="modalDirectors">Dir. {FilmCardProps.directors}</p>
+                        <h1>{FilmCardProps.title}</h1>
+                        <p className="modalDirectors">Dir. {FilmCardProps.dir}</p>
 
                         <div className="modalInfo">
                             <div><span>Year</span>{FilmCardProps.year}</div>
-                            <div><span>Runtime</span>{FilmCardProps.runtime}</div>
-                            <div><span>Genre</span>{FilmCardProps.genres}</div>
+                            <div><span>Runtime</span>{FilmCardProps.rt}</div>
+                            <div><span>Genre</span>{FilmCardProps.gens}</div>
                         </div>
 
                         <p className="synopsis">
-                            {FilmCardProps.synopsis ?? "Full details for this screening are coming soon."}
+                            {FilmCardProps.desc ?? "Full details for this screening are coming soon."}
                         </p>
                     </div>
                 </div>
@@ -131,4 +123,3 @@ export default function FilmCard(FilmCardProps:FilmCardProps){
 //         </article>
 
 //     )
-// }

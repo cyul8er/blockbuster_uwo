@@ -1,11 +1,65 @@
 [
     {
-        "title": "",
-        "year": "",
-        "dir": "",
+        "id": "mc",
+        "title": "Multiple Choice",
+        "year": "2026",
+        "dir": "Nicole Surette-Bourque, Sierra Katori",
         "rt": "",
-        "gen": ""
+        "gens": "Slasher, Comedy",
+        "img": "",
+        "desc": ""
     },
+        
+    {
+        "id": "regurgitate",
+        "title": "Regurgitate",
+        "year": "2026",
+        "dir": "Jasmine Xu, Amara C",
+        "rt": "",
+        "gens": "Psychological Drama",
+        "img": "",
+        "desc": ""
+    },    
     
-    {}
+    {
+        "id": "aleksi",
+        "title": "Aleksi",
+        "year": "2026",
+        "dir": "Quincy Gluskin",
+        "rt": "",
+        "gens": "Slasher, Comedy",
+        "img": "",
+        "desc": ""
+    },    
+
+    {
+        "id": "upcoming",
+        "title": "Upcoming..",
+        "year": "202X",
+        "dir": "Cameron Schacter, Brin Webber",
+        "rt": "",
+        "gens": "TBD",
+        "img": "",
+        "desc": ""
+    },
+        {
+        "id": "upcoming",
+        "title": "Upcoming..",
+        "year": "202X",
+        "dir": "Cameron Schacter, Brin Webber",
+        "rt": "",
+        "gens": "TBD",
+        "img": "",
+        "desc": ""
+    },
+        {
+        "id": "upcoming",
+        "title": "Upcoming..",
+        "year": "202X",
+        "dir": "Cameron Schacter, Brin Webber",
+        "rt": "",
+        "gens": "TBD",
+        "img": "",
+        "desc": ""
+    }
 ]
