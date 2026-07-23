@@ -1,5 +1,10 @@
 import styles from './about.module.css'
 import MemberCard from '@/components/MemberCard'
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About | Blockbuster",
+};
 
 export default function About(){
     return(
