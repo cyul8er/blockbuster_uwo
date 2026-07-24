@@ -43,8 +43,6 @@ export default function Home() {
         <span>O</span>
         <span>N</span>
     </div>
-
-
     </section>
 
     <section className="sec sec3">
@@ -52,8 +50,6 @@ export default function Home() {
     <div id = "newsPreview">  
       <HomeNews></HomeNews>
     </div>
-    
-    {/* <script src = main.js> </script> */}
     </section>
   </>
   )

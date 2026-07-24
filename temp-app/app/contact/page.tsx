@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact | Blockbuster",
+};
+
+
 export default function Contact(){
     return(
         <section className="h-screen w-screen">
