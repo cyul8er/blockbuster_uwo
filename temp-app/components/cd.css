@@ -1,5 +1,189 @@
-
 .sec.sec1{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('/assetshome/bbwMainBG.png');
+    background-size: cover;
+}
+
+.promo{
+    position: relative;
+    width: clamp(320px, 55vw, 800px);
+    aspect-ratio: 8 / 9;
+}
+
+.coverBox{
+    position: absolute;
+
+    width: 60%;
+    aspect-ratio: 2/3;
+
+    left: 0;
+    top: 5.5%;
+
+    background: gray;
+
+    /* vertices */
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    /* order */
+    z-index: 2;
+
+    overflow: hidden; /* clips poster + overlay to the case shape */
+}
+
+@media (max-width: 700px) {
+    .sec.sec1{
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        padding: 2rem 1rem;
+    }
+    .promo{
+        width: min(85vw, 500px);
+    }
+    .selection{
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.coverBox img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+/* Jewel-case overlay: pure CSS, painted on top of whatever poster is
+   loaded, so a raw poster image always reads as "in a case" — no
+   separate transparent-case asset needed per film. */
+.coverBox::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background:
+        linear-gradient(115deg,
+            rgba(255,255,255,0.35) 0%,
+            rgba(255,255,255,0) 22%,
+            rgba(255,255,255,0) 68%,
+            rgba(255,255,255,0.12) 100%);
+
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.45),
+        inset 0 0 18px rgba(0,0,0,0.35),
+        inset -6px 0 10px -6px rgba(0,0,0,0.4);
+}
+
+.cdBox{
+    position: absolute;
+
+    width: 85%;
+    aspect-ratio: 1 / 1;
+
+    left: 31%;
+    top: 8.3%;
+
+    border-radius: 50%;
+    cursor: pointer;
+
+    /* order */
+    z-index: 1;
+
+    /* punches the spindle hole so the page background shows through */
+    -webkit-mask-image: radial-gradient(circle at center, transparent 0 7%, black 7.6% 100%);
+    mask-image: radial-gradient(circle at center, transparent 0 7%, black 7.6% 100%);
+
+    box-shadow:
+        0 0 0 2px rgba(255,255,255,0.25),
+        0 0 25px rgba(0,0,0,0.35);
+
+    transition: box-shadow 0.2s ease;
+}
+
+.cdBox:hover{
+    box-shadow:
+        0 0 0 2px rgba(255,255,255,0.45),
+        0 0 30px rgba(0,0,0,0.5);
+}
+
+.cdBox video{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    border-radius: 50%;
+
+    display: block;
+}
+
+/* shine sweep, layered above the colour/video */
+.cdBox::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 2;
+
+    background: conic-gradient(
+        from 200deg,
+        rgba(255,255,255,0.35) 0deg,
+        rgba(255,255,255,0) 40deg,
+        rgba(255,255,255,0) 320deg,
+        rgba(255,255,255,0.2) 360deg
+    );
+}
+
+.cdBox.spinning{
+    animation: cdSpin 2.5s linear infinite;
+}
+
+@keyframes cdSpin{
+    from{ transform: rotate(0deg); }
+    to{ transform: rotate(360deg); }
+}
+
+.selection{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    line-height: 1.5;
+    margin-left: clamp(1rem, 8vw, 200px);
+}
+
+.selection button.option{
+    background: none;
+    border: none;
+    padding: 0;
+
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+
+    color: black;
+    cursor: pointer;
+
+    text-align: left;
+    line-height: 1;
+}
+.selection button.option:hover{
+    opacity: 0.5;
+}
+
+.option.active{
+    opacity: 0.5;
+}
+
+/* spacer */
+/* .sec.sec1{
     height: 100vh;
     display: flex;
     align-items: center;
@@ -25,11 +209,10 @@
 
     background: gray;
 
-    /* vertices */
+
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 
-    /* order */
     z-index: 2;
 }
 
@@ -52,7 +235,6 @@
 
     border-radius: 50%;
 
-    /* order */
     z-index: 1;
 }   
 
@@ -163,4 +345,4 @@
 .sec.sec3{
     height: 100vh;
     width: 100vw;
-}
+} */
