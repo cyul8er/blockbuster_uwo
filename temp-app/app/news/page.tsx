@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "News | Blockbuster",
+};
+
+
 export default function News(){
     return(
         <section> 
