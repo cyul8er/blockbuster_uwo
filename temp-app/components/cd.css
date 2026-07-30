@@ -2,14 +2,32 @@
     height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url('/assetshome/bbwMainBG.png');
-    background-size: cover;
+    background-color: #F8F8FF;
+    /* background-image: url('/assetshome/bbwMainBG.png');
+    background-size: cover; */
+}
+@media (max-width: 700px) {
+    .sec.sec1{
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        padding: 2rem 1rem;
+    }
+    .promo{
+        width: min(85vw, 500px);
+    }
+    .selection{
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 .promo{
     position: relative;
-    width: clamp(320px, 55vw, 800px);
+    width: clamp(340px, 45vw, 900px);
     aspect-ratio: 8 / 9;
+    margin-top: 10vh;
 }
 
 .coverBox{
@@ -30,24 +48,7 @@
     /* order */
     z-index: 2;
 
-    overflow: hidden; /* clips poster + overlay to the case shape */
-}
-
-@media (max-width: 700px) {
-    .sec.sec1{
-        flex-direction: column;
-        justify-content: center;
-        gap: 2rem;
-        padding: 2rem 1rem;
-    }
-    .promo{
-        width: min(85vw, 500px);
-    }
-    .selection{
-        margin-left: 0;
-        align-items: center;
-        text-align: center;
-    }
+    overflow: hidden; 
 }
 
 .coverBox img{
@@ -156,7 +157,7 @@
     align-items: flex-start;
     gap: 5px;
     line-height: 1.5;
-    margin-left: clamp(1rem, 8vw, 200px);
+    margin-left: clamp(1rem, 13vw, 200px);
 }
 
 .selection button.option{

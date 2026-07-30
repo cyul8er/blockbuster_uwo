@@ -56,7 +56,7 @@ header{
 .hbMenu.active .topBar{
     transform:
         translateY(
-            clamp(6px, 0.7vw, 9px)
+            clamp(9px, 0.7vw, 9px)
         )
         rotate(45deg);
     background: #e6e6fa;
@@ -64,7 +64,7 @@ header{
 .hbMenu.active .botBar{
     transform:
         translateY(
-            clamp(-6px, -0.7vw, -9px)
+            clamp(-9px, -0.7vw, -9px)
         )
         rotate(-45deg);
     background: #e6e6fa;
@@ -98,6 +98,8 @@ header{
 
 .menuSide{
     position: fixed;
+    display: flex;
+    flex-direction: column;
 
     top: 0;
     left: 0;
@@ -105,9 +107,6 @@ header{
     width: min(400px, 80vw);
 
     height: 100vh;
-
-    background: #1b003f;
-
     padding:
         clamp(5rem, 8vw, 8rem)
         clamp(2rem, 3vw, 3rem);
@@ -119,6 +118,21 @@ header{
     z-index: 999;
 
     overflow-y: auto;
+
+    background-color: #1b003f;
+
+    -webkit-mask-image:
+        linear-gradient(to bottom, black 0 6px, transparent 7.5px 20.5px, black 22px 28px),
+        linear-gradient(to right, black 0 calc(100% - 23px), transparent calc(100% - 21.5px) calc(100% - 9.5px), black calc(100% - 8px) 100%);
+    mask-image:
+        linear-gradient(to bottom, black 0 6px, transparent 7.5px 20.5px, black 22px 28px),
+        linear-gradient(to right, black 0 calc(100% - 23px), transparent calc(100% - 21.5px) calc(100% - 9.5px), black calc(100% - 8px) 100%);
+
+    -webkit-mask-size: 100% 28px, 100% 100%;
+    mask-size: 100% 28px, 100% 100%;
+
+    -webkit-mask-repeat: repeat-y, no-repeat;
+    mask-repeat: repeat-y, no-repeat;
 }
 
 .menuSide.active{
@@ -129,10 +143,39 @@ header{
 
 .sideNav{
     display: flex;
-
+    flex: 1;
     flex-direction: column;
-
+    min-height: 0;
+    gap: 0;
     gap: clamp(1.5rem, 2vw, 2.5rem);
+}
+.sideNav > div{
+    flex: 1;
+    border: 2px solid rgba(230, 230, 250, 0.6);
+    padding: clamp(0.75rem, 1.5vw, 1.25rem) clamp(1rem, 2vw, 1.5rem);
+    display: flex;
+    align-items: center;
+}
+
+.sideNav{
+    --frame-h: 4.5rem; /* rough average frame height — tune once real content is in */
+}
+
+.sideNav::before,
+.sideNav::after{
+    content: "";
+    flex: 0.2;
+    display: block;
+    height: calc(var(--frame-h) / 5);
+    border: 2px solid rgba(230, 230, 250, 0.6);
+}
+
+.sideNav::before{
+    border-top: none; /* cut off at top — this sliver is the bottom edge of a frame that continues upward, off-screen */
+}
+
+.sideNav::after{
+    border-bottom: none; /* cut off at bottom — this sliver is the top edge of a frame that continues downward, off-screen */
 }
 
 /* LINKS */

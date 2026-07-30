@@ -13,10 +13,10 @@ export default function HeaderCD(){
     // add a "trailer" path per cover once you have clips — leave "" to fall
     // back to the flat colour disc with no video
     const covers = [
-        { name: "Multiple Choice", image: "/cdCover/Upcoming20XX.png", colour: "#E6E6FA", trailer: "" },
-        { name: "Regurgitate", image: "/cdCover/Regurgitate.png", colour: "#000000", trailer: "" },
-        { name: "Aleksi", image: "/cdCover/Upcoming20XX.png", colour: "#F0F8FF", trailer: "" },
-        { name: "Your Film Here", image: "/cdCover/Your_Film_Here.png", colour: "#FFC0CB", trailer: "" },
+        { name: "Multiple Choice", image: "/cdCover/Upcoming20XX.png", colour: "#800000", trailer: "" },
+        { name: "Regurgitate", image: "/cdCover/Regurgitate.png", colour: "#000080", trailer: "" },
+        { name: "Aleksi", image: "/cdCover/Upcoming20XX.png", colour: "#000040", trailer: "" },
+        { name: "Your Film Here", image: "/cdCover/Your_Film_Here.png", colour: "#006400", trailer: "" },
     ]
 
     const current = covers[cdIndex]

@@ -1,4 +1,4 @@
-
+/* 
 .sec.sec1{
     height: 100vh;
     display: flex;
@@ -26,11 +26,11 @@
     background: gray;
 
     /* vertices */
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    /* border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px; */
 
     /* order */
-    z-index: 2;
+    /* z-index: 2;
 }
 
 .coverBox img{
@@ -52,7 +52,7 @@
 
     border-radius: 50%;
 
-    /* order */
+    /* order */ /*
     z-index: 1;
 }   
 
@@ -86,12 +86,13 @@
 
 .option.active{
     opacity: 0.5;
-}
+} */ 
 
 
 .sec.sec2{
-    height: 100vh;
-    width: 100vw;
+    /* height: 100vh;
+    width: 100vw; */
+    background-color: aliceblue;
     margin: auto;
     display: grid;
 
@@ -111,12 +112,14 @@
 }
 .panel1{
     border: 3px solid black;
+    width: 35vw;
 }
 .panel1 img{
     width: 100%;
 
     object-fit: cover;
     display: block;
+    aspect-ratio: 1/1;
 }
 .rightHome{
     display: grid;
@@ -159,6 +162,25 @@
 
     text-transform: uppercase;
 }
+.panel1, .panel2{
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #111;
+    background-color: #eaf2f4;
+}
+.panel1::after, .panel2::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(15,15,25,0.35) 1px, transparent 1.2px);
+    background-size: 4px 4px;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+}
+.panel1 img, .smallPanel img{
+    filter: grayscale(1) contrast(1.2);
+}
+
 .sec.sec3{
     height: 100vh;
     width: 100vw;
