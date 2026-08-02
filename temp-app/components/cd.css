@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     background-color: #F8F8FF;
+    position: relative
     /* background-image: url('/assetshome/bbwMainBG.png');
     background-size: cover; */
 }
@@ -153,11 +154,13 @@
 
 .selection{
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: flex-start;
     gap: 5px;
     line-height: 1.5;
     margin-left: clamp(1rem, 13vw, 200px);
+    z-index: 2;
 }
 
 .selection button.option{
@@ -181,6 +184,71 @@
 
 .option.active{
     opacity: 0.5;
+}
+
+.sideDecor{
+    position: absolute;
+    top: 8%;
+    right: 4%;
+    bottom: 6%;
+    display: flex;
+    align-items: flex-end;
+    gap: clamp(0.5rem, 1.5vw, 1.25rem);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.wrapText{
+    display: flex;
+    gap: 4px;
+    height: 100%;
+    align-items: flex-start;
+}
+.wrapText span{
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgba(0,0,0,0.18);
+    white-space: nowrap;
+}
+
+.barStack{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;    
+}
+
+.textemoji{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+    color: rgba(0,0,0,0.35);
+}
+
+.textemoji span{
+    writing-mode: vertical-lr;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #220079;
+}
+
+.barcode{
+    width: 35px;
+    height: 90px;
+    background-image: repeating-linear-gradient(
+        to bottom,
+        #220079 0px, #220079 2px,
+        transparent 2px, transparent 3px,
+        #220079 3px, #220079 6px,
+        transparent 6px, transparent 8px,
+        #220079 8px, #220079 9px,
+        transparent 9px, transparent 12px
+    );
 }
 
 /* spacer */

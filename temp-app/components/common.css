@@ -23,7 +23,7 @@ header{
 .hbMenu{
     position: fixed;
     /* clamp (min, pref, max) */
-    top: clamp(1rem, 0.5vw, 2rem);
+    top: clamp(1rem, 0.5vw, 1.5rem);
     left: clamp(0.5rem, 1vw, 2rem);
 
     width: clamp(50px, 5vw, 70px);

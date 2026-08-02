@@ -92,6 +92,26 @@ export default function HeaderCD(){
                     </button>
                 ))}
             </div>
+
+            <div className="sideDecor" aria-hidden="true">
+                <div className="wrapText">
+                <span>playing now ... made by cyu</span>
+                <span>contribution || hzg</span>
+                <span>working hard or hardly working</span>
+                <span> lowkey don't know what else to write</span>
+                <span>placeholder text</span>
+                <span>i can't tell if this is too much text</span>
+                
+            </div>
+
+            <div  className="barStack"> 
+                <div className="textemoji">
+                    <span>⋆✴︎˚｡⋆ ݁₊ ⊹ . ݁ ⟡ ݁ . ⊹ ⏮ [ ▸ ] ⏭ ⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ⋆✴︎˚｡⋆ ⋆˙⟡ </span>
+                </div>
+                <div className="barcode" />
+            </div>
+            
+            </div>
         </section>
     )
 }
