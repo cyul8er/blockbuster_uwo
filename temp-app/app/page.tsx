@@ -41,8 +41,7 @@ export default function Home() {
         <div className = "text">
             <p className = "font-bold">EST. 2025</p> <br /><br /><br />
             <p>At Blockbuster, we're dedicated to giving you and your fellow students at Western the opportunity to become the best version of yourself through the beautiful collaborative art form of filmmaking. </p>
-            <br />
-    <br /><br /><br />
+            <br /><br /><br /><br />
         </div>
 
         <div className = "panel2">
@@ -67,7 +66,6 @@ export default function Home() {
     </section>
 
     <section className="sec sec3">
-    <h1>news</h1>
     <div id = "newsPreview">  
       <HomeNews></HomeNews>
     </div>
