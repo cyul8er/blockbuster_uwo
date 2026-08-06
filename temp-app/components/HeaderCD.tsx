@@ -38,7 +38,7 @@ export default function HeaderCD(){
 
     function handleSelect(index: number) {
         setCdIndex(index)
-        setIsPlaying(false)
+        setIsPlaying(true)
     }
 
     function toggleDisc() {
@@ -69,6 +69,7 @@ export default function HeaderCD(){
                 >
                     {current.trailer && (
                         <video
+                            key={current.trailer}
                             ref={videoRef}
                             src={current.trailer}
                             muted

@@ -3,6 +3,17 @@ html, body{
     background: #F8F8FF;
 }
 
+/* film grain overlay -- thouhgt this was a good idea but it lowkey doesnt show up that well so wtv  */
+/* body::after{
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 1;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode: overlay;
+} */
 .sec.sec2{
     background-color: #F8F8FF;
     display: grid;

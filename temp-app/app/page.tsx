@@ -8,6 +8,7 @@ export default function Home() {
     <>
     <HeaderCD></HeaderCD>
 
+
     <section className="sec sec2">
     <div className="leftHome">
         <div className="panel0">
