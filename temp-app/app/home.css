@@ -141,5 +141,6 @@ html, body{
 }
 
 .sec.sec3{
-    background-color: #F8F8FF;
+    display: flex;
+    min-height: 100vh;
 }

@@ -2,6 +2,8 @@ import "./home.css"
 import Image from "next/image"
 import HeaderCD from "@/components/HeaderCD"
 import HomeNews from "@/components/HomeNews"
+import CurrProd from '@/components/currProd'
+
 
 export default function Home() {
   return (
@@ -69,6 +71,9 @@ export default function Home() {
     <section className="sec sec3">
     <div id = "newsPreview">  
       <HomeNews></HomeNews>
+    </div>
+    <div id = "currentProd">
+        <CurrProd></CurrProd>
     </div>
     </section>
   </>
