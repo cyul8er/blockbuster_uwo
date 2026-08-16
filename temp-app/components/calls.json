@@ -1,0 +1,59 @@
+[
+    {
+        "id": "regurgitate",
+        "title": "Regurgitate",
+        "genre": "placeholder",
+        "description": "Short description of the production goes here.",
+        "estimatedTime": "6 weeks",
+        "crewCall": {
+            "status": "closed",
+            "formLink": "https://forms.gle/placeholder1"
+        },
+        "castCall": {
+            "status": "closed",
+            "formLink": "https://forms.gle/placeholder2"
+        },
+        "extrasCall": {
+            "status": "closed",
+            "formLink": "https://forms.gle/placeholder3"
+        }
+    },
+    {
+        "id": "aleksei",
+        "title": "Aleksei",
+        "genre": "placeholder",
+        "description": "Short description of the production goes here.",
+        "estimatedTime": "6 weeks",
+        "crewCall": {
+            "status": "closed",
+            "formLink": "https://forms.gle/placeholder1"
+        },
+        "castCall": {
+            "status": "closed",
+            "formLink": "https://forms.gle/placeholder2"
+        },
+        "extrasCall": {
+            "status": "closed",
+            "formLink": "https://forms.gle/placeholder3"
+        }
+    },
+    {
+        "id": "cam",
+        "title": "Untitled",
+        "genre": "placeholder",
+        "description": "Short description of the production goes here.",
+        "estimatedTime": "6 weeks",
+        "crewCall": {
+            "status": "closed",
+            "formLink": "https://forms.gle/placeholder1"
+        },
+        "castCall": {
+            "status": "closed",
+            "formLink": "https://forms.gle/placeholder2"
+        },
+        "extrasCall": {
+            "status": "closed",
+            "formLink": "https://forms.gle/placeholder3"
+        }
+    }
+]
