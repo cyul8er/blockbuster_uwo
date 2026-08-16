@@ -17,7 +17,7 @@ export default function Footer(){
                     <p style={{fontSize: 'smaller'}}>socials</p>
                     <ul>
                         <li>
-                            <a href="https://www.instagram.com/blockbuster_western/">Instagram</a>
+                            <a href="https://www.instagram.com/blockbusteruwo/">Instagram</a>
                         </li>
                         <li>
                             <a href="https://youtu.be/r6-hEA3mNaw?si=pHhzcdtuUjxa0vBc">Youtube</a>

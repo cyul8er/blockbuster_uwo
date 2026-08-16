@@ -1,0 +1,36 @@
+/* style for news and call sheets */
+.newsCarousel{
+    flex: 3;
+    border: 2px dashed rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0,0,0,0.4);
+}
+
+.productionRows{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.productionRow{
+    position: relative;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    background: #f4f1ea;
+    border-right: 2px dashed rgba(0,0,0,0.4); /* perforation — where it "attaches" */
+    margin-bottom: -1px; /* rows touch so the torn edges read as one continuous fringe */
+    clip-path: polygon(
+        5% 0%, 100% 0%, 100% 100%, 4% 100%,
+        7% 90%, 2% 80%, 8% 70%, 3% 60%,
+        9% 50%, 2% 40%, 7% 30%, 3% 20%,
+        8% 10%
+    );
+}
+.productionRow h4{
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
