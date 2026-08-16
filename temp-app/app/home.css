@@ -144,3 +144,23 @@ html, body{
     display: flex;
     min-height: 100vh;
 }
+.recentLabel{
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem; 
+}
+.recentLabel span{
+    font-weight: 900;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+.newsPreview{
+    padding-left: 2rem;
+    flex:3;
+}
+
+.currentProd{
+    flex:1.5;
+}

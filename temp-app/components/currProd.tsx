@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react"
 import "./sec3.css"
+import calls from "./calls.json"
 
 
 type CallStatus = "open" | "closed"
@@ -26,39 +27,8 @@ interface Production {
 // CurrentProductions only ever calls getActiveProductions(), never a specific
 // backend directly.
 function getActiveProductions(): Production[] {
-    return [
-        {
-            id: "p1",
-            title: "p11",
-            genre: "placeholder",
-            description: "Short description of the production goes here.",
-            estimatedTime: "6 weeks",
-            crewCall: { status: "open", formLink: "https://forms.gle/placeholder1" },
-            castCall: { status: "open", formLink: "https://forms.gle/placeholder2" },
-            extrasCall: { status: "closed", formLink: "https://forms.gle/placeholder3" },
-        },
-        {
-            id: "p2",
-            title: "p22",
-            genre: "placeholder",
-            description: "Short description of the production goes here.",
-            estimatedTime: "4 weeks",
-            crewCall: { status: "closed", formLink: "https://forms.gle/placeholder4" },
-            castCall: { status: "open", formLink: "https://forms.gle/placeholder5" },
-            extrasCall: { status: "open", formLink: "https://forms.gle/placeholder6" },
-        },
-        {
-            id: "p3",
-            title: "p33",            
-            genre: "placeholder",
-            description: "Short description of the production goes here.",
-            estimatedTime: "8 weeks",
-            crewCall: { status: "open", formLink: "https://forms.gle/placeholder7" },
-            castCall: { status: "closed", formLink: "https://forms.gle/placeholder8" },
-            extrasCall: { status: "closed", formLink: "https://forms.gle/placeholder9" },
-        },
+    return calls as Production[]
 
-    ]
 }
 
 function CallRow({ label, call }: { label: string; call: Call }) {
@@ -73,6 +43,8 @@ function CallRow({ label, call }: { label: string; call: Call }) {
                 <span className="callClosed">Call closed</span>
             )}
         </div>
+
+        
     )
 }
 
@@ -100,7 +72,11 @@ export default function CurrentProductions() {
 
             <div className="productionRows">
                 {productions.map((p) => (
-                    <div key={p.id} className="productionRow" onClick={() => setActiveProduction(p)}>
+                    <div
+                        key={p.id}
+                        className={`productionRow ${activeProduction?.id === p.id ? "selected" : ""}`}
+                        onClick={() => setActiveProduction(p)}
+                    >
                         <h4>{p.title}</h4>
                     </div>
                 ))}

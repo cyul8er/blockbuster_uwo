@@ -1,5 +1,5 @@
 import news from './allnews.json'
-import './cd.css'
+import './sec3.css'
 import Image from 'next/image'
 
 export default function HomeNews(){
