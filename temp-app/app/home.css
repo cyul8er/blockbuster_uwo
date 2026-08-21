@@ -142,7 +142,6 @@ html, body{
 
 .sec.sec3{
     display: flex;
-    min-height: 100vh;
 }
 .recentLabel{
     flex: 0 0 auto;

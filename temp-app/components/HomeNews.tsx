@@ -1,22 +1,14 @@
 import { getRecentPosts } from "@/lib/notion"
+import NewsCarousel from "./NewsCarousel" // adjust path if NewsCarousel lives elsewhere relative to this file
 import "./sec3.css"
 
 export default async function HomeNews() {
     const posts = await getRecentPosts(3)
 
-    return (
-        <>
-            {posts.map((article) => (
-                <div className="newsCard" key={article.id}>
-                    <h2>{article.title}</h2>
-                    <p>{article.date}</p>
-                    <p>{article.author}</p>
-                    <p>{article.type}</p>
-                </div>
-            ))}
-        </>
-    )
+    return <NewsCarousel posts={posts} />
 }
+
+
 
 // import news from './allnews.json'
 // import './sec3.css'
