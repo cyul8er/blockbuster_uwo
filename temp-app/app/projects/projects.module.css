@@ -3,6 +3,12 @@ html, body {
     color: antiquewhite;
 }
 
+.projHead{
+    align-self: center;
+}
+.projHead h1{
+    text-transform: uppercase;
+}
 .nowShowing{
     width: 100vw;
     height: 100vh;
