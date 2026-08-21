@@ -2,6 +2,7 @@ import styles from "./projects.module.css"
 import FilmCard from "@/components/FilmCard"
 import films from "./proj.json"
 import type { Metadata } from "next";
+import './projects.module.css'
 
 export const metadata: Metadata = {
   title: "Projects | Blockbuster",
@@ -10,14 +11,10 @@ export const metadata: Metadata = {
 
 export default function Projects() {
   return (
-    <div>
-      <section className="relative">
-        <div className={styles["film-page"]}></div>
-        <div className={styles["film-page-header"]}>
-          <span className={styles["film-eyebrow"]}> Blockbuster Western Full Archive</span>
-        </div>
-      </section>
-
+    <>
+    <div className="projHead">
+      <h1>BBW Projects Archive</h1>
+    </div>
       <section className="relative z-10">
         <div className={styles.directory}>
           {films.map((film) => (
@@ -34,6 +31,6 @@ export default function Projects() {
           ))}
         </div>
       </section>
-    </div>
+    </>
   )
 }
