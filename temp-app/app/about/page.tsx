@@ -1,3 +1,4 @@
+import ContentList from '@/components/ContentList';
 import styles from './about.module.css'
 import MemberCard from '@/components/MemberCard'
 import type { Metadata } from "next";
@@ -9,7 +10,10 @@ export const metadata: Metadata = {
 export default function About(){
     return(
         <>
-        <section className = {styles.history}> About section </section>
+        <div className={styles.paperOverlay} aria-hidden="true"/> 
+        <section className = {styles.content}> 
+            <ContentList/>
+        </section>
 
         <section className = {styles.teamSection}> 
         <div className = {styles.titleColumn}>
@@ -27,7 +31,6 @@ export default function About(){
         </div>
 
         <div className={styles.infoColumn}>
-
             <div className={styles.infoPanel} />
             <div className={styles.infoPanel}></div>
             <div className={styles.infoPanel}>

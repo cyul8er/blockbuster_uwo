@@ -1,4 +1,17 @@
-.history{
+
+.paperOverlay{
+    position: fixed;
+    inset: 0;
+    background-image: url('/assetshome/TextureLabs_Paper_313L.jpg');
+    background-repeat: repeat;
+    background-size: 5000px;
+    pointer-events: none;
+    mix-blend-mode: darken; /* try 'overlay' or 'soft-light' too */
+    opacity: 0.25; /* tune to taste */
+    z-index: 9999;
+}
+
+.content{
     height: 100vh;
     width: 100vw;
 }
@@ -21,7 +34,7 @@
 
 /* LEFT TITLE COLUMN */
 .titleColumn{
-    border-right:4px solid black;
+    /* border-right:4px solid black; */
 
     display:flex;
     justify-content:center;
