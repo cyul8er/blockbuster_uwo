@@ -6,7 +6,7 @@
         "dir": "Nicole Surette-Bourque, Sierra Katori",
         "rt": "",
         "gens": "Slasher, Comedy",
-        "img": "",
+        "img": "/placeholder/kyoka.jpg",
         "desc": ""
     },
         
@@ -27,7 +27,7 @@
         "year": "2026",
         "dir": "Quincy Gluskin",
         "rt": "",
-        "gens": "Slasher, Comedy",
+        "gens": "Triller, Drama",
         "img": "",
         "desc": ""
     },    
@@ -36,27 +36,7 @@
         "id": "upcoming",
         "title": "Upcoming..",
         "year": "202X",
-        "dir": "Cameron Schacter, Brin Webber",
-        "rt": "",
-        "gens": "TBD",
-        "img": "",
-        "desc": ""
-    },
-        {
-        "id": "upcoming",
-        "title": "Upcoming..",
-        "year": "202X",
-        "dir": "Cameron Schacter, Brin Webber",
-        "rt": "",
-        "gens": "TBD",
-        "img": "",
-        "desc": ""
-    },
-        {
-        "id": "upcoming",
-        "title": "Upcoming..",
-        "year": "202X",
-        "dir": "Cameron Schacter, Brin Webber",
+        "dir": "",
         "rt": "",
         "gens": "TBD",
         "img": "",
