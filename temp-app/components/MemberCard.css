@@ -1,9 +1,3 @@
-.history{
-    height: 100vh;
-    width: 100vw;
-}
-
-
 /* EACH SECTION */
 .teamSection{
     display: grid;
@@ -105,6 +99,9 @@
     width: 100%;
     aspect-ratio: 1/1;
 
+    border: 3px;
+    border-color: black;
+
     object-fit: cover;
 
     display: block;
@@ -126,6 +123,7 @@
 
 .memberInfo p{
     margin: 0.25rem 0 0 0;
+    border-bottom: 2px;
 }
 
 /* RIGHT COLUMN */

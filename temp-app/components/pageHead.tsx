@@ -1,14 +1,12 @@
-import type { Metadata } from "next";
-import './sponstyle.css'
+"use client";
 
-export const metadata: Metadata = {
-  title: "Sponsors | Blockbuster",
-};
+import { useState } from "react";
+import "./common.css"
 
-export default function Sponsors(){
+export default function pageHead(){
     return(
         <>
-        <section className="sec sec-spon">
+                <section className="sec sec-spon">
             <div className = "sponHead"> 
                 <h1>Sponsor info</h1>
             </div>
@@ -38,17 +36,7 @@ export default function Sponsors(){
             </p>
           </div>
         </div>
-        <section className = "current">
-            <h1> Current sponsors</h1>
         </section>
-
-        <section className = "future">
-            <h1> 
-                Sponsorship Package 
-               </h1>
-        </section>
-
-        </section>
-    </>
+        </>
     )
 }
