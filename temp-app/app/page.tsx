@@ -14,7 +14,7 @@ export default function Home() {
     <div className="leftHome">
         <div className="panel0">
             <Image
-                src="/placeholder/Timeline.jpg"
+                src="/assetsHome/SierraMCCam.jpg"
                 alt="photo one"
                 width="500"
                 height="500"
@@ -31,7 +31,7 @@ export default function Home() {
         </div>
         <div className="panel1">
             <Image
-                src="/placeholder/Timeline.jpg"
+                src="/assetsHome/WheelCam.jpg"
                 alt="photo two"
                 width="500"
                 height="500"
@@ -41,7 +41,7 @@ export default function Home() {
 
     <div className = "rightHome">
         <div className = "text">
-            <p className = "font-bold">EST. 2025</p> <br /><br /><br />
+            <p className = "font-bold">EST. 2026</p> <br /><br /><br />
             <p>At Blockbuster, we're dedicated to giving you and your fellow students at Western the opportunity to become the best version of yourself through the beautiful collaborative art form of filmmaking. </p>
             <br /><br /><br />
         </div>
