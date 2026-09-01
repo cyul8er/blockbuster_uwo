@@ -14,7 +14,7 @@ export default function Home() {
     <div className="leftHome">
         <div className="panel0">
             <Image
-                src="/assetsHome/SierraMCCam.jpg"
+                src="/assetshome/SierraMCCam.jpg"
                 alt="photo one"
                 width="500"
                 height="500"
@@ -31,7 +31,7 @@ export default function Home() {
         </div>
         <div className="panel1">
             <Image
-                src="/assetsHome/WheelCam.jpg"
+                src="/assetshome/WheelCam.jpg"
                 alt="photo two"
                 width="500"
                 height="500"
