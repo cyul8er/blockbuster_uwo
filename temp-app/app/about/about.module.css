@@ -67,7 +67,9 @@
     grid-template-columns: repeat(2, 1fr);
 
 }
-
+.leadGrid .centre{
+    grid-column: span 1;
+}
 
 /* CREATIVE */
 .creativeGrid{

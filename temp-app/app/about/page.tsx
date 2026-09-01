@@ -18,11 +18,15 @@ export default function About(){
 
         <div className = {styles.membersColumn}> 
             <div className = {`${styles.memberGrid} ${styles.leadGrid}`}>
-                <MemberCard name="Rohum Zaman" role="President" letterboxd='https://boxd.it/5NHqb' image="/placeholder/Ash.jpg" alt="pres" className="large"></MemberCard>
-                <MemberCard name="Amara" role="Vice President" letterboxd='https://boxd.it/5NHqb' image="/placeholder/Ash.jpg" alt="pres" className="large"></MemberCard>
-                <MemberCard name="Quincy" role="Vice President" letterboxd='https://boxd.it/5NHqb' image="/placeholder/Ash.jpg" alt="pres" className="large"></MemberCard>
-                <MemberCard name="Jasmine Xu" role="Vice President" letterboxd='https://letterboxd.com/filmwithjasmine/' image="/placeholder/Ash.jpg" alt="pres" className="large"></MemberCard>
-                <MemberCard name="Nicole" role="Vice President" letterboxd='https://boxd.it/5NHqb' image="/placeholder/Ash.jpg" alt="pres" className="large"></MemberCard>
+                <MemberCard name="Rohum Zaman" 
+                    role="President" letterboxd='https://boxd.it/5NHqb' 
+                    image="/placeholder/Ash.jpg" 
+                    alt="pres" 
+                    className="col-span-1"></MemberCard>
+                <MemberCard name="Amara Chigbo" role="VP Marketing" letterboxd='https://boxd.it/5NHqb' image="/placeholder/Ash.jpg" alt="pres" className="large"></MemberCard>
+                <MemberCard name="Quincy Gluskin" role="VP Production" letterboxd='https://boxd.it/5NHqb' image="/placeholder/Ash.jpg" alt="pres" className="large"></MemberCard>
+                <MemberCard name="Nicole" role="VP Production" letterboxd='https://boxd.it/5NHqb' image="/placeholder/Ash.jpg" alt="pres" className="large"></MemberCard>
+                <MemberCard name="Jasmine Xu" role="VP Events" letterboxd='https://letterboxd.com/filmwithjasmine/' image="/placeholder/Ash.jpg" alt="pres" className="large"></MemberCard>
             </div>
         </div>
 
@@ -78,8 +82,7 @@ export default function About(){
                     <MemberCard name="Nicole" role="VP Production" image="/placeholder/Ash.jpg" alt="vpProduction" className="col-span-2"></MemberCard>
                     <MemberCard name="Cameron" role="VP Design" letterboxd="https://boxd.it/5fk3P" image="/placeholder/Ash.jpg" alt="vpDesign" className="col-span-3"></MemberCard>
                     <MemberCard name="Ella" role="VP Design" letterboxd="https://boxd.it/9iE8d" image="/placeholder/Ash.jpg" alt="vpDesign" className="col-span-3"></MemberCard>
-                    <MemberCard name="Oswin" role="VP Camera" image="/placeholder/Ash.jpg" alt="vpCamera" className="col-span-3"></MemberCard>
-                    <MemberCard name="Michael" role="VP Camera" image="/placeholder/Ash.jpg" alt="vpCamera" className="col-span-3"></MemberCard>
+                    <MemberCard name="Henson Han" role="VP Cinematography"image="/placeholder/Ash.jpg" alt="vpDesign" className="col-span-3"></MemberCard>
                     <MemberCard name="Name" role="VP Composition" image="/placeholder/Ash.jpg" alt="vpComposition" className="col-span-2"></MemberCard>
                     <MemberCard name="Jonelle" role="VP Makeup & Hair" image="/placeholder/jonelle.jpg" alt="vpMakeupHair" className="col-span-2"></MemberCard>
                     <MemberCard name="Sierra" role="VP Performance" image="/placeholder/Ash.jpg" alt="vpPerformance" className="col-span-2"></MemberCard>
