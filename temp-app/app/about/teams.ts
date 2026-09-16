@@ -82,7 +82,7 @@ export const teams: Team[] = [
         blurb: "The creative division of the club is dedicated to holding community events and making some banger movies that we hope to screen at the western undergraduate film festival (WUFS) and other local film festivals.",
         rows: [
             [
-                { name: "Cameron Schater", 
+                { name: "Cameron Schacter", 
                     role: "Design", 
                     image: "/placeholder/Ash.jpg" },
                 { name: "Ella Sheils", 
