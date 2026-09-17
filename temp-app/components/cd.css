@@ -4,8 +4,6 @@
     align-items: center;
     background-color: #F8F8FF;
     position: relative
-    /* background-image: url('/assetshome/bbwMainBG.png');
-    background-size: cover; */
 }
 @media (max-width: 700px) {
     .sec.sec1{
@@ -86,11 +84,11 @@
 .cdBox{
     position: absolute;
 
-    width: 85%;
+    width: 88%;
     aspect-ratio: 1 / 1;
 
-    left: 31%;
-    top: 8.3%;
+    left: 40%;
+    top: 7.5%;
 
     border-radius: 50%;
     cursor: pointer;
@@ -98,9 +96,6 @@
     /* order */
     z-index: 1;
 
-    /* punches the spindle hole so the page background shows through */
-    -webkit-mask-image: radial-gradient(circle at center, transparent 0 7%, black 7.6% 100%);
-    mask-image: radial-gradient(circle at center, transparent 0 7%, black 7.6% 100%);
 
     box-shadow:
         0 0 0 2px rgba(255,255,255,0.25),
@@ -126,7 +121,7 @@
 }
 
 /* shine sweep, layered above the colour/video */
-.cdBox::before{
+/* .cdBox::before{
     content: "";
     position: absolute;
     inset: 0;
@@ -150,7 +145,7 @@
 @keyframes cdSpin{
     from{ transform: rotate(0deg); }
     to{ transform: rotate(360deg); }
-}
+} */
 
 .selection{
     display: flex;
@@ -159,7 +154,7 @@
     align-items: flex-start;
     gap: 5px;
     line-height: 1.5;
-    margin-left: clamp(1rem, 13vw, 200px);
+    margin-left: clamp(1.2rem, 13vw, 200px);
     z-index: 2;
 }
 

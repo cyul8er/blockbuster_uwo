@@ -7,15 +7,13 @@ import { useState, useRef, useEffect } from "react"
 
 export default function HeaderCD(){
     const [cdIndex, setCdIndex] = useState(0)
-    const [isPlaying, setIsPlaying] = useState(false)
+    const [isPlaying, setIsPlaying] = useState(true)
     const videoRef = useRef<HTMLVideoElement>(null)
 
-    // add a "trailer" path per cover once you have clips — leave "" to fall
-    // back to the flat colour disc with no video
     const covers = [
-        { name: "Multiple Choice", image: "/cdCover/mc_cd.png", colour: "#800000", trailer: "" },
-        { name: "Regurgitate", image: "/cdCover/Regurgitate.png", colour: "#000080", trailer: "" },
-        { name: "Aleksi", image: "/cdCover/Upcoming20XX.png", colour: "#000040", trailer: "" },
+        { name: "Multiple Choice", image: "/cdCover/mc_cd.png", colour: "#800000", trailer: "/cdTrailer/mc_trailer.mp4" },
+        // { name: "Regurgitate", image: "/cdCover/Regurgitate.png", colour: "#000080", trailer: "" },
+        // { name: "Aleksi", image: "/cdCover/Upcoming20XX.png", colour: "#000040", trailer: "" },
         { name: "Your Film Here", image: "/cdCover/Your_Film_Here.png", colour: "#006400", trailer: "" },
     ]
 
@@ -42,7 +40,6 @@ export default function HeaderCD(){
     }
 
     function toggleDisc() {
-        // no trailer yet? spin for show, just don't try to play a video
         setIsPlaying((prev) => !prev)
     }
 

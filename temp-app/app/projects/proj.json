@@ -4,42 +4,20 @@
         "title": "Multiple Choice",
         "year": "2026",
         "dir": "Nicole Surette-Bourque, Sierra Katori",
-        "rt": "",
+        "rt": "15m",
         "gens": "Slasher, Comedy",
-        "img": "/placeholder/kyoka.jpg",
-        "desc": ""
+        "img": "/proj_still/mc_still.jpg",
+        "desc": "This exam is gonna kill me."
     },
         
     {
-        "id": "regurgitate",
-        "title": "Regurgitate",
-        "year": "2026",
-        "dir": "Jasmine Xu, Amara Chigbo",
-        "rt": "",
-        "gens": "Psychological Drama",
-        "img": "",
-        "desc": ""
-    },    
-    
-    {
-        "id": "aleksi",
-        "title": "Aleksi",
-        "year": "2026",
-        "dir": "Quincy Gluskin",
-        "rt": "",
-        "gens": "Triller, Drama",
-        "img": "",
-        "desc": ""
-    },    
-
-    {
         "id": "upcoming",
-        "title": "Upcoming..",
+        "title": "Upcoming...",
         "year": "202X",
-        "dir": "",
-        "rt": "",
+        "dir": "You.",
+        "rt": "XhXm",
         "gens": "TBD",
-        "img": "",
-        "desc": ""
+        "img": "/placeholder/Timeline.jpg",
+        "desc": "Your film here."
     }
 ]
