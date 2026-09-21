@@ -136,9 +136,9 @@ html, body{
     mix-blend-mode: multiply;
     pointer-events: none;
 }
-.panel1 img, .smallPanel img{
+/* .panel1 img, .smallPanel img{
     filter: grayscale(1) contrast(1.2);
-}
+} */
 
 .sec.sec3{
     display: flex;
